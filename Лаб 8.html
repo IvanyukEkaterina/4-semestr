@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var k=1;
+function showImage(n) {
+document.getElementById("img1").style.borderColor="black";
+document.getElementById("img2").style.borderColor="black";
+document.getElementById("img3").style.borderColor="black";
+document.getElementById("img4").style.borderColor="black";
+document.getElementById("img5").style.borderColor="black";
+document.getElementById("bigimg").src="img"+n+".jpg";
+document.getElementById("img"+n).style.borderColor="red";
+k=n;};
+function changeImage() {
+document.getElementById("img1").style.borderColor="black";
+document.getElementById("img2").style.borderColor="black";
+document.getElementById("img3").style.borderColor="black";
+document.getElementById("img4").style.borderColor="black";
+document.getElementById("img5").style.borderColor="black";
+document.getElementById("bigimg").src="img"+(k+1)+".jpg";
+document.getElementById("img"+(k+1)).style.borderColor="red";
+k!=4 ? k++ : k=0;}
+</script>
+</head>
+<body onload="showImage(1)">
+<img id="bigimg" src="img1.jpg" border="3px" width="50%" onclick="changeImage()"/><br>
+<img id="img1" src="img1.jpg" border="3px" width="10%" onclick="showImage(1)"/>
+<img id="img2" src="img2.jpg" border="3px" width="10%" onclick="showImage(2)"/>
+<img id="img3" src="img3.jpg" border="3px" width="10%" onclick="showImage(3)"/>
+<img id="img4" src="img4.jpg" border="3px" width="10%" onclick="showImage(4)"/>
+<img id="img5" src="img5.jpg" border="3px" width="10%" onclick="showImage(5)"/>
+</body>
+</html>
